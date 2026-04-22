@@ -116,23 +116,6 @@ h1.page-title{
 }
 
 /* ═══════════════════════════════════════
-   Intro 라인 (맨 앞 회사 소개)
-   ═══════════════════════════════════════ */
-.intro-line {
-  text-align: center;
-  font-size: 15px;
-  color: var(--text-muted);
-  font-weight: 500;
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
-  line-height: 1.6;
-}
-.intro-line strong {
-  color: var(--text);
-  font-weight: 800;
-}
-
-/* ═══════════════════════════════════════
    Hero 섹션
    ═══════════════════════════════════════ */
 .hero-wrap {
@@ -208,30 +191,69 @@ h1.page-title{
 }
 
 /* ═══════════════════════════════════════
+   브랜드 후킹 헤드라인 (표 바깥 강조)
+   ═══════════════════════════════════════ */
+.brand-hook {
+  text-align: center;
+  margin: 36px 0 16px;
+}
+.brand-hook-prefix {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sky);
+  background: var(--sky-soft);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.brand-hook-main {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.brand-hook-highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--sky);
+}
+.brand-hook-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgba(74, 144, 226, 0.18);
+  z-index: -1;
+  border-radius: 4px;
+}
+.brand-hook-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ═══════════════════════════════════════
    브랜드 로고 그리드
    ═══════════════════════════════════════ */
 .logos-wrap {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 36px 24px 32px;
-  margin: 32px 0 40px;
+  padding: 32px 24px;
+  margin: 16px 0 40px;
 }
 .logos-caption {
-  text-align: center;
-  font-size: 15px;
-  color: var(--text);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  line-height: 1.5;
+  display: none;
 }
 .logos-caption-sub {
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-muted);
-  font-weight: 500;
-  margin-bottom: 28px;
+  display: none;
 }
 .logos-grid {
   display: grid;
@@ -288,7 +310,7 @@ h1.page-title{
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 28px 28px;
-  margin: 8px 0 40px;
+  margin: 24px 0 40px;
 }
 .benefit-item {
   display: flex;
@@ -983,7 +1005,11 @@ h1.page-title{
   .benefit-box { padding: 22px 20px; }
   .logos-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 12px; }
   .brand-logo { font-size: 12px; }
-  .logos-wrap { padding: 28px 16px 24px; }
+  .logos-wrap { padding: 24px 16px; }
+  .brand-hook { margin: 28px 0 12px; }
+  .brand-hook-main { font-size: 20px; }
+  .brand-hook-prefix { font-size: 12px; padding: 4px 12px; margin-bottom: 12px; }
+  .brand-hook-sub { font-size: 12px; }
   .article-card .ac-img{ width:80px }
   .gradient-cta-banner { padding: 36px 20px; }
   .gradient-cta-main { font-size: 28px; }
@@ -1034,11 +1060,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ═══════════════════════════════════════
        Intro + Hero 섹션
        ═══════════════════════════════════════ -->
-  <p class="intro-line">
-    뷰티 릴스 제작 플랫폼 <strong>'글로브'</strong>에서<br/>
-    <strong>전직 승무원 인플루언서</strong>를 모십니다.
-  </p>
-
   <h1 class="page-title">✈️ 전직 승무원 모집</h1>
 
   <div class="hero-wrap">
@@ -1057,14 +1078,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
     <div class="hero-only">
       <span>✈️</span>
-      전직 승무원 전용 인플루언서 풀 모집
+      전직 승무원 풀 모집
     </div>
+  </div>
+
+  <!-- 브랜드 로고 강조 헤드라인 -->
+  <div class="brand-hook">
+    <h2 class="brand-hook-main">
+      <span class="brand-hook-highlight">대부분의 올리브영 입점 브랜드</span>가<br/>
+      글로브에서 릴스 제작 중
+    </h2>
+    <p class="brand-hook-sub">2,000개+ 뷰티 브랜드가 글로브 이용중</p>
   </div>
 
   <!-- 브랜드 로고 그리드 -->
   <div class="logos-wrap">
-    <p class="logos-caption">이미 대부분의 올리브영 입점 브랜드가<br/>글로브에서 릴스 제작 중</p>
-    <p class="logos-caption-sub">(2,000개+ 뷰티 브랜드가 글로브 이용중)</p>
     <div class="logos-grid">
       <div class="brand-logo" style="text-transform:uppercase;letter-spacing:0.02em;">Amorepacific</div>
       <div class="brand-logo">LG생활건강</div>
@@ -1102,15 +1130,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        1. 왜 전직 승무원인가
        ═══════════════════════════════════════ -->
   <div data-track="section_1">
-  <h2 class="section-heading">왜 지금 전직 승무원인가요?</h2>
-  <p class="section-subtitle">세 가지 관점에서 풀어봤어요</p>
+  <h2 class="section-heading">왜 지금 등록해야될까요?</h2>
 
   <div class="benefit-box">
     <div class="benefit-item">
       <span class="benefit-emoji">✨</span>
       <div class="benefit-content">
-        <span class="perspective-label brand-perspective">브랜드가 원합니다</span>
-        <p class="benefit-title">단아하고 세련된 이미지</p>
+        <p class="benefit-title">브랜드가 원하는 단아하고 세련된 이미지</p>
         <p class="benefit-desc">
           뷰티 브랜드들이 가장 선호하는 <strong>"깔끔하고 단정한 이미지"</strong>.<br/>
           전직 승무원님께서는 해당 이미지를<br/>
@@ -1122,11 +1148,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="benefit-item">
       <span class="benefit-emoji">✨</span>
       <div class="benefit-content">
-        <span class="perspective-label you-perspective">가볍게 시작할 수 있습니다</span>
-        <p class="benefit-title">부담 없이 시작 가능</p>
+        <p class="benefit-title">뷰티 릴스 제작 경험이 없거나 적어도 시작 가능</p>
         <p class="benefit-desc">
           이미 브랜드가 원하는 이미지를 가지고 계시기 때문에,<br/>
-          <strong>뷰티 릴스 제작 경험이 적거나 없어도</strong> 최소한의 기준만 만족하면 충분합니다.<br/>
+          <strong>최소한의 기준만 만족하면 충분합니다.</strong><br/>
           편집·촬영 가이드는 글로브가 모두 제공합니다.
         </p>
       </div>
@@ -1214,7 +1239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        ═══════════════════════════════════════ -->
   <a class="gradient-cta-banner" href="https://tally.so/r/9qJeZ4" target="_blank" rel="noopener" id="cta-btn-1">
     <p class="gradient-cta-sub">✈️ 전직 승무원 전용</p>
-    <p class="gradient-cta-main" style="margin-bottom:24px;">30초면 지원 완료</p>
+    <p class="gradient-cta-main" style="margin-bottom:24px;">30초면 등록 완료</p>
     <div class="gradient-cta-button-wrap">
       <span class="gradient-cta-button">
         여기를 클릭 →
@@ -1399,7 +1424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        ═══════════════════════════════════════ -->
   <div data-track="section_6">
   <h2 class="section-heading">합류 전 궁금한 점</h2>
-  <p class="section-subtitle">지원자들이 자주 묻는 질문</p>
+  <p class="section-subtitle">등록 전 자주 묻는 질문</p>
 
   <div class="faq-list">
     <div class="faq-item">
@@ -1409,7 +1434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="faq-item">
       <p class="faq-q">팔로워 수가 적어도 괜찮나요?</p>
-      <p class="faq-a">네. 글로브는 릴스 제작 플랫폼이라, 인플루언서의 팔로워보다는 영상 결과물 자체가 중요합니다. 브랜드는 영상을 2차 활용(광고 소재로 사용)하기 때문에 팔로워 수보다 영상 퀄리티와 이미지를 봅니다.</p>
+      <p class="faq-a">네. 글로브는 릴스 제작 플랫폼이라, 인플루언서의 팔로워보다는 영상 결과물 자체가 중요합니다. 브랜드는 영상을 2차 활용(광고 소재로 사용)하기 때문에 팔로워 수보다는 영상 그 자체를 봅니다.</p>
     </div>
 
     <div class="faq-item">
@@ -1428,8 +1453,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="faq-item">
-      <p class="faq-q">현직 승무원인데 지원 가능할까요?</p>
-      <p class="faq-a">회사에서 겸업금지 조항이 없거나, 회사 허락을 받으면 가능합니다. 규정상 문제가 없는지 먼저 확인 후 지원 부탁드려요.</p>
+      <p class="faq-q">현직 승무원인데 등록 가능할까요?</p>
+      <p class="faq-a">회사에서 겸업금지 조항이 없거나, 회사 허락을 받으면 가능합니다. 규정상 문제가 없는지 먼저 확인 후 등록 부탁드려요.</p>
     </div>
 
     <div class="faq-item">
@@ -1449,7 +1474,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        ═══════════════════════════════════════ -->
   <a class="gradient-cta-banner" href="https://tally.so/r/9qJeZ4" target="_blank" rel="noopener" id="cta-btn-2">
     <p class="gradient-cta-sub">✈️ 전직 승무원 전용</p>
-    <p class="gradient-cta-main" style="margin-bottom:24px;">30초면 지원 완료</p>
+    <p class="gradient-cta-main" style="margin-bottom:24px;">30초면 등록 완료</p>
     <div class="gradient-cta-button-wrap">
       <span class="gradient-cta-button">
         여기를 클릭 →
@@ -1458,7 +1483,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 
   <div class="process-box">
-    <p>• 지원 프로세스 : 위 링크로 1분만에 지원 완료 → 담당자 확인 후 연락</p>
+    <p>• 등록 프로세스 : 위 링크로 30초만에 등록 완료 → 담당자 확인 후 연락</p>
     <p>• 선착순 심사이며, 모집 인원 마감 시 종료될 수 있습니다</p>
     <p>• 문의 : <a href="mailto:youjin@glovv.co.kr" style="color:inherit">youjin@glovv.co.kr</a></p>
   </div>
@@ -1471,12 +1496,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- 카카오 저장 버튼 -->
 <button class="kakao-save-btn" onclick="shareKakao()">
-  🔖 저장하고 다시보기
+  💬 친구에게 공유하기
 </button>
 
 <!-- floating CTA -->
 <a class="floating-cta" href="https://tally.so/r/9qJeZ4" target="_blank" rel="noopener" id="cta-btn-float">
-  <span class="cta-main-text">✈️ 지금 바로 지원하기 (30초 소요)</span>
+  <span class="cta-main-text">✈️ 지금 바로 등록하기 (30초 소요)</span>
 </a>
 
 <script>
