@@ -42,10 +42,15 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '881944777433930');
-fbq('track', 'PageView');
+fbq('trackCustom', 'CabinPageView');
+
+// Tally 폼 제출 완료 시 발화 (URL에 ?registered=true 파라미터 있을 때)
+if (new URLSearchParams(window.location.search).get('registered') === 'true') {
+  fbq('trackCustom', 'CabinCompleteRegistration');
+}
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=881944777433930&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=881944777433930&ev=CabinPageView&noscript=1"
 /></noscript>
 
 <!-- Google Tag Manager -->
@@ -1521,7 +1526,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         campaign: 'cabincrew'
       });
       if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', { cta_position: label, campaign: 'cabincrew' });
+        fbq('trackCustom', 'CabinLead', { cta_position: label });
       }
     });
   });
@@ -1541,7 +1546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           campaign: 'cabincrew'
         });
         if (milestone === 50 && typeof fbq !== 'undefined') {
-          fbq('trackCustom', 'DeepScroll', { scroll_percent: 50, campaign: 'cabincrew' });
+          fbq('trackCustom', 'CabinDeepScroll', { scroll_percent: 50 });
         }
       }
     });
@@ -1592,7 +1597,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       campaign: 'cabincrew'
     });
     if (typeof fbq !== 'undefined') {
-      fbq('trackCustom', 'Save', { cta_position: 'kakao_share', campaign: 'cabincrew' });
+      fbq('trackCustom', 'CabinSave', { cta_position: 'kakao_share' });
     }
     if (typeof Kakao === 'undefined' || !Kakao.Share) {
       alert('카카오톡 공유 기능을 불러오는 중입니다. 잠시 후 다시 시도해주세요.');
