@@ -384,88 +384,6 @@ h1.page-title{
 }
 
 /* ═══════════════════════════════════════
-   이런 전직 승무원을 원해요 (지원 자격)
-   ═══════════════════════════════════════ */
-.requirements-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin: 16px 0 8px;
-}
-.requirement-item {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px 24px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.requirement-num {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--sky);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-}
-.requirement-body {
-  flex: 1;
-}
-.requirement-title {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-.requirement-title .req-highlight {
-  position: relative;
-  display: inline-block;
-  color: var(--sky);
-}
-.requirement-title .req-highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 1px;
-  left: 0;
-  right: 0;
-  height: 7px;
-  background: rgba(74, 144, 226, 0.18);
-  z-index: -1;
-  border-radius: 3px;
-}
-.requirement-sub {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.requirement-sub li {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  padding-left: 14px;
-  position: relative;
-}
-.requirement-sub li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--text-light);
-}
-.requirement-sub li strong {
-  color: #e74c3c;
-  font-weight: 800;
-}
-
-/* ═══════════════════════════════════════
    FAQ
    ═══════════════════════════════════════ */
 .faq-list {
@@ -678,10 +596,6 @@ h1.page-title{
   .good-for-box { padding: 20px 22px; }
   .good-for-list li { font-size: 13.5px; }
   .reels-showcase, .airlines-wrap, .video-wrap { padding: 14px; }
-  .requirement-item { padding: 18px 20px; gap: 12px; }
-  .requirement-num { width: 28px; height: 28px; font-size: 14px; }
-  .requirement-title { font-size: 14.5px; }
-  .requirement-sub li { font-size: 13px; }
   .brands-copy { font-size: 15px; }
   .brands-copy p + p { margin-top: 14px; }
   .quote-box { font-size: 15.5px; line-height: 1.95; }
@@ -806,39 +720,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <strong>깔끔하고 단정한 이미지,<br/>
       그리고 전직 승무원이라는 사실</strong>만으로 충분해요.
     </p>
-  </div>
-  </div>
-
-  <div class="sp-divider"></div>
-
-  <!-- ═══════════════════════════════════════
-       이런 전직 승무원을 원해요 (지원 자격)
-       ═══════════════════════════════════════ -->
-  <div data-track="section_requirements">
-  <h2 class="section-heading">
-    이런 <span class="heading-accent">전직 승무원</span>을 원해요
-  </h2>
-
-  <div class="requirements-list">
-    <div class="requirement-item">
-      <div class="requirement-num">1</div>
-      <div class="requirement-body">
-        <p class="requirement-title">인스타그램 <span class="req-highlight">공개 계정</span>을 보유해야해요</p>
-        <ul class="requirement-sub">
-          <li>비공개 계정 <strong>X</strong></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="requirement-item">
-      <div class="requirement-num">2</div>
-      <div class="requirement-body">
-        <p class="requirement-title">뷰티 릴스를 최소 <span class="req-highlight">1번 이상 제작</span>해봤어야해요</p>
-        <ul class="requirement-sub">
-          <li>제작했던 뷰티 릴스 URL 제출 <strong>필수</strong></li>
-        </ul>
-      </div>
-    </div>
   </div>
   </div>
 
